@@ -53,6 +53,10 @@ input[type="checkbox"] {
 	justify-content: space-around;
 	color: white;
 }
+
+.sidebar-list-item:active {
+	color: #f9cd36;
+}
 .sidebar-list-item {
 	padding-left: 10px;
 }
