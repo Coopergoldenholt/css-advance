@@ -1,0 +1,151 @@
+@import "./cssReset.css";
+@import url("https://fonts.googleapis.com/css?family=Allura|Kulim+Park|Ubuntu:400,400i&display=swap");
+
+body {
+	height: 200vh;
+}
+.navbar {
+	background: transparent;
+	color: #f9cd36;
+	height: 10vh;
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	position: fixed;
+}
+
+.navbar-list {
+	display: flex;
+	color: white;
+}
+
+.hamburger-button {
+	display: none;
+	color: black;
+	background: #f9cd36;
+	border: none;
+	border-radius: 4px;
+	padding: 5px;
+}
+
+.hamburger {
+	max-height: 25px;
+	max-width: 25px;
+}
+input[type="checkbox"] {
+	display: none;
+}
+
+.sidebar-list {
+	position: fixed;
+	top: -50vh;
+	right: 0;
+	background: black;
+	width: 100vw;
+	transition: 1s;
+	height: 200px;
+	overflow-y: hidden;
+	z-index: -1;
+	font-family: "Kulim Park", sans-serif;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	color: white;
+}
+.sidebar-list-item {
+	padding-left: 10px;
+}
+
+.title {
+	font-size: 3rem;
+	font-family: "Allura", cursive;
+}
+
+.navbar-list-item {
+	padding: 10px;
+	font-family: "Kulim Park", sans-serif;
+	font-size: 1.1rem;
+}
+
+.navbar-list-item:hover {
+	color: #f9cd36;
+	transition: 300ms;
+}
+
+.first-page {
+	height: 90vh;
+	background-image: url("https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fblackrockdigital.github.io%2Fstartbootstrap-agency%2Fimg%2Fheader-bg.jpg");
+	background-size: cover;
+	background-position: center;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family: "Ubuntu", sans-serif;
+	flex-wrap: wrap;
+}
+
+.first-page-text {
+	padding: 20px;
+}
+
+.top-first-page {
+	font-style: italic;
+	font-size: 4rem;
+}
+
+.second-first-page {
+	font-size: 6rem;
+	text-align: center;
+}
+
+.first-page-button {
+	background: #f9cd36;
+	color: white;
+	border-radius: 4px;
+	border: 0;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	padding-left: 4rem;
+	padding-right: 4rem;
+	font-size: 2rem;
+}
+
+@media (max-width: 990px) {
+	.navbar {
+		background: black;
+	}
+	.navbar-list {
+		display: none;
+	}
+	.hamburger-button {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+	.first-page-text {
+		padding: 10px;
+	}
+
+	.top-first-page {
+		font-size: 2rem;
+	}
+
+	.second-first-page {
+		font-size: 3rem;
+	}
+
+	.first-page-button {
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		padding-left: 2rem;
+		padding-right: 2rem;
+		font-size: 1rem;
+	}
+	input[type="checkbox"]:checked ~ .sidebar-list {
+		top: 10vh;
+	}
+}
